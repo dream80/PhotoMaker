@@ -25,7 +25,7 @@ photomaker_ckpt = hf_hub_download(repo_id="TencentARC/PhotoMaker", filename="pho
 
 pipe = PhotoMakerStableDiffusionXLPipeline.from_pretrained(
     base_model_path, 
-    torch_dtype=torch.bfloat16, 
+    torch_dtype=torch.float16, 
     use_safetensors=True, 
     variant="fp16",
 ).to(device)
